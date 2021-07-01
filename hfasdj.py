@@ -1,17 +1,17 @@
-def preguntar(pregunta, respuestas):
+def question(question, answers):
 
-    for i in range(len(respuestas)):
-        respuestas[i] = respuestas[i].lower()
+    for i in range(len(answers)):
+        answers[i] = answers[i].lower()
     
     while True:
-        p = input(f"{pregunta} {respuestas}: ").lower()
+        p = input(f"{question} {answers}: ").lower()
 
-        for r in respuestas:
+        for r in answers:
             if p == r:
                 print("OK")
                 return p
         
         print("Esa no es una opción\n")
 
-respuesta = preguntar("te gusta la comida?: ", ["Si", "nO"])
-print(f"Respuesta: {respuesta}")
+answer = question("te gusta la comida?: ", ["Si", "nO"])
+print(f"Respuesta: {answer}")
